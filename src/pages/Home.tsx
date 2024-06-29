@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import getTodayTimings from '../utils/getTodayTimings';
 import { getPrayerTimings } from '../utils/apiService';
 import SalahTimetable from '../pages/SalahTimetable';
