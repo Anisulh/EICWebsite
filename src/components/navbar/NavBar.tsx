@@ -1,18 +1,54 @@
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
-  return (
-    <nav className="flex w-full border px-8 py-2 shadow-sm">
-      <Link to="/" className="mr-4">
-        <img src="/logo.svg" alt="EICLogo" className="h-8" />
-      </Link>
-      <div className="flex-1" />
-      <div className="space-x-4">
-        <Link to="/">Home</Link>
-        <Link to="/donate">Donate</Link>
-        <Link to="/expansion">Expansion</Link>
-        <Link to="/services">Services</Link>
-      </div>
-    </nav>
-  );
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <nav className='w-full border-b bg-primary text-white'>
+            <div className='flex justify-between items-center px-4 py-2'>
+                <Link to='/' className='mr-4'>
+                    <img src='/logo.svg' alt='EICLogo' className='h-8' />
+                </Link>
+                <button onClick={toggleMenu} className='md:hidden'>
+                    <svg
+                        className='w-6 h-6'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                        xmlns='http://www.w3.org/2000/svg'
+                    >
+                        <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth='2'
+                            d='M4 6h16M4 12h16m-7 6h7'
+                        />
+                    </svg>
+                </button>
+                <div
+                    className={`flex-col md:flex-row md:flex md:items-center ${
+                        isOpen ? 'flex' : 'hidden'
+                    }`}
+                >
+                    <Link to='/' className='block px-2 py-1 md:px-4'>
+                        Home
+                    </Link>
+                    <Link to='/donate' className='block px-2 py-1 md:px-4'>
+                        Donate
+                    </Link>
+                    <Link to='/expansion' className='block px-2 py-1 md:px-4'>
+                        Expansion
+                    </Link>
+                    <Link to='/services' className='block px-2 py-1 md:px-4'>
+                        Services
+                    </Link>
+                </div>
+            </div>
+        </nav>
+    );
 }

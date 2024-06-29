@@ -1,0 +1,290 @@
+{
+    "January": [
+        {
+            "date": "1-15",
+            "fajr": "6:30",
+            "zuhr": "1:15",
+            "asr": "3:30",
+            "maghrib": "Sunset",
+            "isha": "7:00"
+        },
+        {
+            "date": "16-31",
+            "fajr": "6:30",
+            "zuhr": "1:15",
+            "asr": "3:45",
+            "maghrib": "Sunset",
+            "isha": "7:15"
+        }
+    ],
+    "February": [
+        {
+            "date": "1-15",
+            "fajr": "6:15",
+            "zuhr": "1:15",
+            "asr": "4:00",
+            "maghrib": "Sunset",
+            "isha": "7:30"
+        },
+        {
+            "date": "16-28",
+            "fajr": "6:00",
+            "zuhr": "1:15",
+            "asr": "4:15",
+            "maghrib": "Sunset",
+            "isha": "7:30"
+        }
+    ],
+    "March": [
+        {
+            "date": "1-9",
+            "fajr": "5:45",
+            "zuhr": "1:15",
+            "asr": "5:00",
+            "maghrib": "Sunset",
+            "isha": "7:45"
+        },
+        {
+            "date": "10-20",
+            "fajr": "6:00",
+            "zuhr": "1:15",
+            "asr": "5:30",
+            "maghrib": "Sunset",
+            "isha": "8:15"
+        },
+        {
+            "date": "21-31",
+            "fajr": "6:00",
+            "zuhr": "1:15",
+            "asr": "5:45",
+            "maghrib": "Sunset",
+            "isha": "8:30"
+        }
+    ],
+    "April": [
+        {
+            "date": "1-10",
+            "fajr": "5:45",
+            "zuhr": "1:15",
+            "asr": "5:45",
+            "maghrib": "Sunset",
+            "isha": "9:00"
+        },
+        {
+            "date": "11-20",
+            "fajr": "5:30",
+            "zuhr": "1:15",
+            "asr": "6:00",
+            "maghrib": "Sunset",
+            "isha": "9:15"
+        },
+        {
+            "date": "21-30",
+            "fajr": "5:15",
+            "zuhr": "1:15",
+            "asr": "6:15",
+            "maghrib": "Sunset",
+            "isha": "9:30"
+        }
+    ],
+    "May": [
+        {
+            "date": "1-10",
+            "fajr": "5:00",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "9:45"
+        },
+        {
+            "date": "11-20",
+            "fajr": "4:45",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:00"
+        },
+        {
+            "date": "21-31",
+            "fajr": "4:45",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:15"
+        }
+    ],
+    "June": [
+        {
+            "date": "1-10",
+            "fajr": "4:30",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:00"
+        },
+        {
+            "date": "11-20",
+            "fajr": "4:45",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:15"
+        },
+        {
+            "date": "21-30",
+            "fajr": "4:45",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:30"
+        }
+    ],
+    "July": [
+        {
+            "date": "1-10",
+            "fajr": "4:45",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:30"
+        },
+        {
+            "date": "11-20",
+            "fajr": "5:00",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:15"
+        },
+        {
+            "date": "21-31",
+            "fajr": "5:15",
+            "zuhr": "1:15",
+            "asr": "6:30",
+            "maghrib": "Sunset",
+            "isha": "10:00"
+        }
+    ],
+    "August": [
+        {
+            "date": "1-10",
+            "fajr": "5:15",
+            "zuhr": "1:15",
+            "asr": "6:15",
+            "maghrib": "Sunset",
+            "isha": "10:00"
+        },
+        {
+            "date": "11-20",
+            "fajr": "5:15",
+            "zuhr": "1:15",
+            "asr": "6:15",
+            "maghrib": "Sunset",
+            "isha": "9:45"
+        },
+        {
+            "date": "21-31",
+            "fajr": "5:30",
+            "zuhr": "1:15",
+            "asr": "6:15",
+            "maghrib": "Sunset",
+            "isha": "9:30"
+        }
+    ],
+    "September": [
+        {
+            "date": "1-10",
+            "fajr": "5:45",
+            "zuhr": "1:15",
+            "asr": "6:00",
+            "maghrib": "Sunset",
+            "isha": "9:00"
+        },
+        {
+            "date": "11-20",
+            "fajr": "5:45",
+            "zuhr": "1:15",
+            "asr": "5:45",
+            "maghrib": "Sunset",
+            "isha": "8:45"
+        },
+        {
+            "date": "21-30",
+            "fajr": "6:00",
+            "zuhr": "1:15",
+            "asr": "5:45",
+            "maghrib": "Sunset",
+            "isha": "8:30"
+        }
+    ],
+    "October": [
+        {
+            "date": "1-10",
+            "fajr": "6:15",
+            "zuhr": "1:15",
+            "asr": "5:30",
+            "maghrib": "Sunset",
+            "isha": "8:15"
+        },
+        {
+            "date": "11-20",
+            "fajr": "6:15",
+            "zuhr": "1:15",
+            "asr": "5:15",
+            "maghrib": "Sunset",
+            "isha": "8:00"
+        },
+        {
+            "date": "21-31",
+            "fajr": "6:30",
+            "zuhr": "1:15",
+            "asr": "5:15",
+            "maghrib": "Sunset",
+            "isha": "8:00"
+        }
+    ],
+    "November": [
+        {
+            "date": "1-10",
+            "fajr": "6:30",
+            "zuhr": "1:15",
+            "asr": "4:30",
+            "maghrib": "Sunset",
+            "isha": "8:00"
+        },
+        {
+            "date": "11-20",
+            "fajr": "6:15",
+            "zuhr": "1:15",
+            "asr": "4:30",
+            "maghrib": "Sunset",
+            "isha": "7:45"
+        },
+        {
+            "date": "21-30",
+            "fajr": "6:00",
+            "zuhr": "1:15",
+            "asr": "4:30",
+            "maghrib": "Sunset",
+            "isha": "7:30"
+        }
+    ],
+    "December": [
+        {
+            "date": "1-15",
+            "fajr": "6:30",
+            "zuhr": "1:15",
+            "asr": "4:30",
+            "maghrib": "Sunset",
+            "isha": "7:30"
+        },
+        {
+            "date": "16-31",
+            "fajr": "6:00",
+            "zuhr": "1:15",
+            "asr": "4:30",
+            "maghrib": "Sunset",
+            "isha": "7:00"
+        }
+    ]
+}
