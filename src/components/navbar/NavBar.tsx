@@ -1,5 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import DropDown from "../ui/DropDown";
+
+const ServicesMenu = [
+  { label: "Weekend School", link: "/weekend-school" },
+  { label: "Nikah", link: "/nikah" },
+  { label: "Counseling", link: "/counseling" },
+  { label: "Social Relief", link: "/social-relief" },
+];
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -38,15 +46,14 @@ export default function NavBar() {
                     <Link to='/' className='block px-2 py-1 md:px-4'>
                         Home
                     </Link>
+                    <DropDown label="Services" menuItems={ServicesMenu} />
                     <Link to='/donate' className='block px-2 py-1 md:px-4'>
                         Donate
                     </Link>
                     <Link to='/expansion' className='block px-2 py-1 md:px-4'>
                         Expansion
                     </Link>
-                    <Link to='/services' className='block px-2 py-1 md:px-4'>
-                        Services
-                    </Link>
+                    
                 </div>
             </div>
         </nav>
