@@ -48,7 +48,7 @@ export default function Home() {
         </section>
 
         <section className="w-full bg-white rounded-lg p-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-green-700">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-teal-700">
             Salah Timings for Today
           </h2>
           {todayTimings ? (
