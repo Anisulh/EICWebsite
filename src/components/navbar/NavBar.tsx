@@ -6,7 +6,7 @@ const ServicesMenu = [
   { label: "Weekend School", link: "/weekend-school" },
   { label: "Nikkah", link: "/nikkah" },
   { label: "Counseling", link: "/counseling" },
-  { label: "Social Relief", link: "/social-relief" },
+  { label: "Social Relief", link: "/social-relief" }, 
 ];
 
 export default function NavBar() {
