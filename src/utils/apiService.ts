@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://api.aladhan.com/v1';
+const API_BASE_URL = 'https://api.aladhan.com/v1';
 const API_METHOD = 2; // Example: Islamic Society of North America (ISNA)
 const CITY = 'Elmhurst';
 const COUNTRY = 'United States';
