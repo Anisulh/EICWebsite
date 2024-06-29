@@ -1,35 +1,60 @@
 export default function Counseling() {
   return (
-    <div className="text-xl">
-      <h1 className="text-2xl font-bold text-center w-full mb-10">
+    <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800">
+      <h1 className="text-3xl md:text-4xl font-bold text-center text-teal-600 mb-10">
         Counseling Service
       </h1>
-      <p>
+      <p className="text-lg text-center mb-8">
         Our Shara'ee counseling services address various aspects of Muslim life:
       </p>
-      <ol className="list-decimal max-w-3xl mx-auto my-8 space-y-4">
-        <li>
-          <b>Family Counseling:</b> Addressing intergenerational conflicts,
-          parenting challenges, and family dynamics.
-        </li>
-        <li>
-          <b>Marriage Counseling:</b>Helping couples navigate marital issues in
-          line with Islamic principles.
-        </li>
-        <li>
-          <b> Youth Counseling:</b> Guiding young Muslims through challenges
-          unique to their age group.
-        </li>
-        <li>
-          <b> Spiritual Counseling:</b>Assisting individuals in strengthening
-          their faith and overcoming spiritual obstacles.
-        </li>
-      </ol>
-      <p>
-        Our counselors are well-versed in Islamic teachings and modern
-        counseling techniques, offering a balanced approach to addressing life's
-        challenges.
-      </p>
+      <div className="grid md:grid-cols-2 gap-6">
+        {[
+          {
+            title: "Family Counseling",
+            description:
+              "Addressing intergenerational conflicts, parenting challenges, and family dynamics.",
+            icon: "🏠",
+          },
+          {
+            title: "Marriage Counseling",
+            description:
+              "Helping couples navigate marital issues in line with Islamic principles.",
+            icon: "💍",
+          },
+          {
+            title: "Youth Counseling",
+            description:
+              "Guiding young Muslims through challenges unique to their age group.",
+            icon: "🌱",
+          },
+          {
+            title: "Spiritual Counseling",
+            description:
+              "Assisting individuals in strengthening their faith and overcoming spiritual obstacles.",
+            icon: "☪️",
+          },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-lg p-6 transition-all hover:shadow-xl hover:bg-teal-50"
+          >
+            <div className="flex items-center mb-4">
+              <span className="text-3xl mr-4">{item.icon}</span>
+              <h2 className="text-xl font-semibold text-teal-600">
+                {item.title}
+              </h2>
+            </div>
+            <p className="text-gray-600">{item.description}</p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-10 bg-teal-50 border-l-4 border-teal-500 p-6 rounded-lg shadow-md">
+        <p className="text-lg text-center text-teal-800">
+          Our counselors are well-versed in Islamic teachings and modern
+          counseling techniques, offering a balanced approach to addressing
+          life's challenges.
+        </p>
+      </div>
     </div>
   );
 }
