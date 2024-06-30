@@ -15,7 +15,7 @@ export default function DropDown({
 }) {
   return (
     <Menu>
-      <MenuButton className="inline-flex gap-1 items-center hover:bg-emerald-300 p-0.5 rounded-md transition-colors">
+      <MenuButton className="inline-flex gap-1 items-center hover:bg-teal-600 px-3 py-2 rounded-md transition-colors">
         {label}
         <ChevronDownIcon className="size-4" />
       </MenuButton>
