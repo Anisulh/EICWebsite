@@ -1,6 +1,16 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, LinkProps, useNavigate } from "react-router-dom";
 import DropDown from "../ui/DropDown";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "@headlessui/react";
+import { Bars3Icon, ChevronLeftIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const ServicesMenu = [
   { label: "Weekend School", link: "/weekend-school" },
@@ -10,11 +20,7 @@ const ServicesMenu = [
 ];
 
 export default function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+  const navigate = useNavigate();
   return (
     <nav className="w-full bg-teal-700 text-white shadow-lg">
       <div className="container mx-auto px-4 py-3 md:py-4 flex ">
@@ -29,31 +35,96 @@ export default function NavBar() {
               Elmhurst Islamic Center
             </span>
           </Link>
-          <button
-            onClick={toggleMenu}
-            className="md:hidden focus:outline-none focus:ring-2 focus:ring-white rounded-lg p-2"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+          <Menu>
+            <MenuButton className="md:hidden">
+              <Bars3Icon className="size-6" />
+            </MenuButton>
+            <MenuItems
+              transition
+              anchor="bottom start"
+              className=" w-52 bg-white px-4 py-2 shadow-lg rounded-lg md:hidden origin-top-right transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-              />
-            </svg>
-          </button>
+              <MenuItem>
+                {({ close }) => (
+                  <NavLink
+                    to="/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      close();
+                      navigate("/");
+                    }}
+                  >
+                    Home
+                  </NavLink>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ close }) => (
+                  <Disclosure as="div" onClick={(e) => e.preventDefault()}>
+                    {({ open }) => (
+                      <>
+                        <DisclosureButton className="px-3 py-2 rounded-md text-base font-medium hover:bg-teal-600 hover:text-white transition duration-150 ease-in-out md:inline-block md:mt-0 md:ml-4 w-full text-left flex justify-between items-center">
+                          Services
+                          {open ? (
+                            <ChevronDownIcon className="size-6 " />
+                          ) : (
+                            <ChevronLeftIcon className="size-6" />
+                          )}
+                        </DisclosureButton>
+                        <DisclosurePanel className="pl-4">
+                          {ServicesMenu.map((item) => (
+                            <NavLink
+                              to={item.link}
+                              key={item.label}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                close();
+                                navigate(item.link);
+                              }}
+                            >
+                              {item.label}
+                            </NavLink>
+                          ))}
+                        </DisclosurePanel>
+                      </>
+                    )}
+                  </Disclosure>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ close }) => (
+                  <NavLink
+                    to="/expansion"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      close();
+                      navigate("/expansion");
+                    }}
+                  >
+                    Donate
+                  </NavLink>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ close }) => (
+                  <NavLink
+                    to="/expansion"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      close();
+                      navigate("/expansion");
+                    }}
+                  >
+                    Expansion
+                  </NavLink>
+                )}
+              </MenuItem>
+            </MenuItems>
+          </Menu>
         </div>
         <div className="hidden md:block flex-1" />
         <div
-          className={`md:flex md:items-center md:justify-end ${
-            isOpen ? "block" : "hidden"
-          } mt-4 md:mt-0`}
+          className={`hidden md:flex md:items-center md:justify-end mt-4 md:mt-0`}
         >
           <div className="flex flex-col md:flex-row md:items-center">
             <NavLink to="/">Home</NavLink>
@@ -67,11 +138,16 @@ export default function NavBar() {
   );
 }
 
-function NavLink({ to, children }: { to: string; children: React.ReactNode }) {
+interface NavLinkProps extends LinkProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+function NavLink({ children, className = "", ...props }: NavLinkProps) {
   return (
     <Link
-      to={to}
-      className="block px-3 py-2 rounded-md text-base font-medium hover:bg-teal-600 transition duration-150 ease-in-out md:inline-block md:mt-0 md:ml-4"
+      className={`block px-3 py-2 rounded-md text-base hover:bg-teal-600 hover:text-white transition duration-150 ease-in-out md:inline-block md:mt-0 md:ml-4 font-bold ${className}`}
+      {...props}
     >
       {children}
     </Link>
