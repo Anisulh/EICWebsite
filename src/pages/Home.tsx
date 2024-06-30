@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className=" min-h-screen flex flex-col items-center">
-      <header className="w-full bg-gradient-to-r from-teal-600 to-teal-800 text-white text-center py-12 px-4 shadow-lg">
+      <header className="w-full bg-gradient-to-r from-teal-600 to-teal-800 text-white text-center py-12 md:py-20 px-4 shadow-lg">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">
           Elmhurst Islamic Center
         </h1>
@@ -30,7 +30,7 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col items-center w-full px-4 py-8 space-y-12 max-w-6xl mx-auto">
-        <section className="bg-white shadow-md rounded-lg p-8 w-full text-center">
+        <section className="bg-white rounded-lg p-8 w-full text-center">
           <p className="text-lg md:text-xl text-center mb-6 text-gray-700 leading-relaxed">
             Elmhurst Islamic Center serves the spiritual, religious, and
             communal needs of the Muslim community by means of nurturing their
