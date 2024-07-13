@@ -11,6 +11,7 @@ import {
 } from '@headlessui/react';
 import { Bars3Icon, ChevronLeftIcon } from '@heroicons/react/20/solid';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import logo from '../../assets/logo.png';
 
 const ServicesMenu = [
     { label: 'Weekend School', link: '/weekend-school' },
@@ -28,9 +29,9 @@ export default function NavBar() {
                 <div className='flex justify-between items-center w-full'>
                     <Link to='/' className='flex items-center'>
                         <img
-                            src='/logo.svg'
-                            alt=''
-                            className='size-10 md:size-12 bg-white rounded-full'
+                            src={logo}
+                            alt='Elmhurst Islamic Center'
+                            className='h-16 md:h-20'
                         />
                         <span className='ml-2 text-lg font-semibold hidden md:inline'>
                             Elmhurst Islamic Center
