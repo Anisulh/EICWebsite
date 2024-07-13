@@ -1,3 +1,6 @@
+import Card from "../components/ui/Card";
+import InfoBanner from "../components/ui/InfoBanner";
+
 export default function SocialRelief() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800 mt-10">
@@ -21,21 +24,15 @@ export default function SocialRelief() {
               "Ongoing efforts to fundraise aid for Palestinian refugees.",
           },
         ].map((item, index) => (
-          <li
-            key={index}
-            className="bg-white shadow-md rounded-lg p-6 transition-transform hover:scale-105"
-          >
-            <h2 className="text-xl font-semibold text-teal-600 mb-2">
-              {item.title}
-            </h2>
+          <Card key={index} title={item.title}>
             <p className="text-gray-600">{item.description}</p>
-          </li>
+          </Card>
         ))}
       </ol>
-      <p className="text-lg text-center mt-10 bg-teal-100 border-l-4 border-teal-500 p-4 rounded-r-lg">
-        We believe in the power of community action and welcome volunteers to
-        join our efforts.
-      </p>
+      <InfoBanner
+        description="We believe in the power of community action and welcome volunteers to
+        join our efforts."
+      />
     </div>
   );
 }

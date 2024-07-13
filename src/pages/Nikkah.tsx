@@ -1,3 +1,6 @@
+import Card from "../components/ui/Card";
+import InfoBanner from "../components/ui/InfoBanner";
+
 export default function Nikkah() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800 mt-10">
@@ -35,24 +38,15 @@ export default function Nikkah() {
             icon: "🏡",
           },
         ].map((item, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-lg rounded-lg p-6 transition-all hover:shadow-xl "
-          >
-            <div className="flex items-center mb-4">
-              <span className="text-3xl mr-4">{item.icon}</span>
-              <h2 className="text-xl font-semibold text-teal-600">
-                {item.title}
-              </h2>
-            </div>
+          <Card title={item.title} icon={item.icon} key={index}>
             <p className="text-gray-600">{item.description}</p>
-          </div>
+          </Card>
         ))}
       </div>
-      <p className="text-lg text-center mt-10 bg-teal-50 border-l-4 border-teal-500 p-4 rounded-r-lg">
-        We strive to make the Nikkah process meaningful, ensuring that couples
-        understand the rights and responsibilities of Islamic marriage.
-      </p>
+      <InfoBanner
+        description="We strive to make the Nikkah process meaningful, ensuring that couples
+        understand the rights and responsibilities of Islamic marriage."
+      />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import InfoBanner from "../components/ui/InfoBanner";
+
 export default function Counseling() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800 mt-10">
@@ -48,13 +50,11 @@ export default function Counseling() {
           </div>
         ))}
       </div>
-      <div className="mt-10 bg-teal-50 border-l-4 border-teal-500 p-6 rounded-lg shadow-md">
-        <p className="text-lg text-center text-teal-800">
-          Our counselors are well-versed in Islamic teachings and modern
+      <InfoBanner
+        description="Our counselors are well-versed in Islamic teachings and modern
           counseling techniques, offering a balanced approach to addressing
-          life's challenges.
-        </p>
-      </div>
+          life's challenges."
+      />
     </div>
   );
 }

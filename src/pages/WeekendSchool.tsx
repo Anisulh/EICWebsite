@@ -1,3 +1,6 @@
+import Card from "../components/ui/Card";
+import InfoBanner from "../components/ui/InfoBanner";
+
 export default function WeekendSchool() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 text-gray-800 mt-10">
@@ -9,7 +12,7 @@ export default function WeekendSchool() {
         in their faith and knowledge. Held on Fridays and Sundays, these classes
         focus on:
       </p>
-      <ol className="space-y-6">
+      <div className="space-y-6">
         {[
           {
             title: "Quranic Recitation",
@@ -36,16 +39,7 @@ export default function WeekendSchool() {
             ],
           },
         ].map((item, index) => (
-          <li
-            key={index}
-            className="bg-white shadow-lg rounded-lg p-6 transition-all hover:shadow-xl"
-          >
-            <div className="flex items-center mb-2">
-              <span className="text-3xl mr-4">{item.icon}</span>
-              <h2 className="text-xl font-semibold text-teal-500">
-                {item.title}
-              </h2>
-            </div>
+          <Card title={item.title} icon={item.icon} key={index}>
             <p className="text-gray-600 mb-2">{item.description}</p>
             {item.subItems && (
               <ul className="list-none pl-6 mt-4 space-y-2">
@@ -60,14 +54,15 @@ export default function WeekendSchool() {
                 ))}
               </ul>
             )}
-          </li>
+          </Card>
         ))}
-      </ol>
-      <p className="text-lg text-center mt-10 bg-teal-50 border-l-4 border-teal-500 p-4 rounded-r-lg">
+      </div>
+      <InfoBanner
+        description="
         Classes are structured by age groups to ensure appropriate learning
         levels. Our experienced teachers create an engaging and supportive
-        environment for children to grow in their faith.
-      </p>
+        environment for children to grow in their faith."
+      />
     </div>
   );
 }
