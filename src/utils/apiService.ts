@@ -7,7 +7,7 @@ export const getPrayerTimings = async () => {
     try {
         const today = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
         const response = await fetch(
-            `${API_BASE_URL}/timingsByCity?city=${CITY}&country=${COUNTRY}&method=${API_METHOD}&date=${today}`
+            `${API_BASE_URL}/timingsByCity?city=${CITY}&country=${COUNTRY}&school=${1}&method=${API_METHOD}&date=${today}`
         );
         if (!response.ok) {
             throw new Error('Network response was not ok');
