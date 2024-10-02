@@ -9,6 +9,7 @@ import Counseling from './pages/Counseling';
 import SocialRelief from './pages/SocialRelief';
 import WeekendSchool from './pages/WeekendSchool';
 import AskImam from './pages/AskImam';
+import Admin from './pages/Admin';
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                     <Route path='/social-relief' element={<SocialRelief />} />
                     <Route path='/weekend-school' element={<WeekendSchool />} />
                     <Route path='/ask-imam' element={<AskImam />} />
+                    <Route path="/admin" element={<Admin />} />
                 </Route>
             </Routes>
         </Router>
